@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Ozone';
+    src: url('Ozone-xRRO.ttf');
+}
+
+body {
+    background: #29292e;
+
+    font-family: 'Ozone';
+}
+
+#clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+#clock-border {
+    width: 420px;
+    height: 420px;
+    position: relative;
+
+    border-radius: 50%;
+    background: linear-gradient(to right, #696969, #acacac);
+}
+
+#clock-face {
+    width: 390px;
+    height: 390px;
+    position: absolute;
+
+    border-radius: 50%;
+    background: #e5e4e2;
+}
+
+#middle-circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 48%;
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+    background: #29292e;
+}
+
+.hand {
+    --rotation: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+
+    transform-origin: bottom;
+    transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+
+    background: black;
+    border-radius: 9999px;
+}
+
+#hour-hand {
+    width: 7px;
+    height: 30%;
+
+    background: #29292e;
+}
+
+#minute-hand {
+    width: 7px;
+    height: 44%;
+
+    background: #29292e;
+}
+
+#second-hand {
+    width: 3px;
+    height: 45%;
+
+    background: red;
+}
+
+#calendar-window {
+    width: 90px;
+    position: absolute;
+    left: 38%;
+    top: 75%;
+    padding: 5px;
+
+    border-radius: 5px;
+    background: #acacac;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
+
+    font-size: 23px;
+    color: #e5e4e2;
+    text-align: center;
+}
+
+.footer a {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+    color: #54575a;
+    text-decoration: none;
+}
