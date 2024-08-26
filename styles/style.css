@@ -1,18 +1,13 @@
 @font-face {
-    font-family: 'Ozone';
-    src: url('Ozone-xRRO.ttf');
-}
-
-@font-face {
     font-family: 'Wind';
     src: url('wind.ttf');
 }
 
 body {
-    background: #29292e;
+    background: radial-gradient(circle, #eedab5, #c59a4b);
 
     font-family: 'Wind';
-    color: #29292e;
+    color: 	#eedab5;
 }
 
 #clock {
@@ -28,7 +23,7 @@ body {
     position: relative;
 
     border-radius: 50%;
-    background: linear-gradient(to right, #696969, #acacac);
+    background: linear-gradient(to right, #704848, #5f433e);
 }
 
 #clock-face {
@@ -37,7 +32,7 @@ body {
     position: absolute;
 
     border-radius: 50%;
-    background: #e5e4e2;
+    background: #362323;
     box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -50,7 +45,7 @@ body {
     transform: translateX(-50%);
 
     border-radius: 50%;
-    background: #29292e;
+    background: #eedab5;
 }
 
 .hand {
@@ -62,29 +57,25 @@ body {
     transform-origin: bottom;
     transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
 
-    background: black;
+    background: #855b5b;
     border-radius: 9999px;
 }
 
 #hour-hand {
     width: 7px;
     height: 30%;
-
-    background: #29292e;
 }
 
 #minute-hand {
     width: 7px;
     height: 44%;
-
-    background: #29292e;
 }
 
 #second-hand {
     width: 3px;
     height: 45%;
 
-    background: red;
+    background: #f37135;
 }
 
 #calendar-window {
@@ -95,11 +86,10 @@ body {
     padding: 5px;
 
     border-radius: 5px;
-    background: #acacac;
-    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    background: #855b5b;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
 
     font-size: 20px;
-    color: #e5e4e2;
     text-align: center;
 }
 
@@ -126,6 +116,6 @@ body {
     font-family: Verdana;
     font-size: 15px;
     text-align: center;
-    color: #54575a;
+    color: #362323;
     text-decoration: none;
 }
