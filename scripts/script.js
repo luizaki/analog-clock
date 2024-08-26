@@ -6,6 +6,20 @@ const hoursHand = document.getElementById('hour-hand');
 // retrieve calendar window
 const calendar = document.getElementById('calendar-window');
 
+// retrieve second tick
+const secondTick = document.querySelector('.second-tick');
+
+// function to display second ticks around the clock
+function setTick(){
+    let ticks = [];
+
+    for(let i = 1; i <= 60; i++) {
+        ticks.push(`<span style="--i: ${i};"><p></p></span>`);
+    }
+    
+    secondTick.insertAdjacentHTML("afterbegin", ticks.join(""));
+}
+
 // function to retrieve current time and call rotate hand function accordingly
 function updateClock() {
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
@@ -34,5 +48,6 @@ function rotateHand(hand, rotation) {
     hand.style.setProperty('--rotation', rotation * 360);
 }
 
-// calling the function every second
+// calling the clock function every second
 setInterval(updateClock, 1000);
+setTick();
