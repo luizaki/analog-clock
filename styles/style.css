@@ -3,10 +3,16 @@
     src: url('Ozone-xRRO.ttf');
 }
 
+@font-face {
+    font-family: 'Wind';
+    src: url('wind.ttf');
+}
+
 body {
     background: #29292e;
 
-    font-family: 'Ozone';
+    font-family: 'Wind';
+    color: #29292e;
 }
 
 #clock {
@@ -32,6 +38,7 @@ body {
 
     border-radius: 50%;
     background: #e5e4e2;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
 }
 
 #middle-circle {
@@ -84,16 +91,29 @@ body {
     width: 90px;
     position: absolute;
     left: 38%;
-    top: 75%;
+    top: 67%;
     padding: 5px;
 
     border-radius: 5px;
     background: #acacac;
-    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
 
-    font-size: 23px;
+    font-size: 20px;
     color: #e5e4e2;
     text-align: center;
+}
+
+.number {
+    position: absolute;
+    inset: 10px;
+    display: inline-block;
+
+    transform: rotate(calc(30deg * var(--num)));
+
+    text-align: center;
+    font-family: 'Wind';
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .footer a {

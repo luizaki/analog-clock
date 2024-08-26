@@ -26,7 +26,7 @@ function updateClock() {
     let month = months[current.getMonth()];
     let date = current.getDate().toString().padStart(2, '0');
 
-    calendar.innerHTML = `${month} ${date}`;
+    calendar.innerHTML = `${month} | ${date}`;
 }
 
 // function to rotate the hand of each component
